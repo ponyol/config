@@ -1,0 +1,123 @@
+##===========+dlgr+==============
+ansible-playbook -i inventories/plat guest-cloudflare.yml -e "nginx_vars=dlgr_nginx_cm_stage"##dialoger cloudflare CM stage
+ansible-playbook -i inventories/plat guest-certbot-nginx-inventory.yml -e "nginx_vars=dlgr_nginx_cm_stage"##dialoger certbot CM stage
+ansible-playbook -i inventories/plat guest-nginx-service.yml -e "nginx_vars=dlgr_nginx_cm_stage"##dialoger nginx CM stage
+ansible-playbook -i inventories/plat guest-nomad-job.yml -e "nginx_vars=dlgr_nginx_cm_stage"##dialoger nomad CM stage
+ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=dlgr_nginx_cm_stage"##dialoger doc CM stage
+ansible-playbook -i inventories/plat guest-gitlab-pipeline.yml -e "nginx_vars=dlgr_nginx_cm_stage"##dialoger pipeline CM stage
+
+ansible-playbook -i inventories/plat guest-cloudflare.yml -e "nginx_vars=dlgr_nginx_dx_stage"##dialoger cloudflare DX stage
+ansible-playbook -i inventories/plat guest-certbot-nginx-inventory.yml -e "nginx_vars=dlgr_nginx_dx_stage"##dialoger certbot DX stage
+ansible-playbook -i inventories/plat guest-nginx-service.yml -e "nginx_vars=dlgr_nginx_dx_stage"##dialoger nginx DX stage
+ansible-playbook -i inventories/plat guest-nomad-job.yml -e "nginx_vars=dlgr_nginx_dx_stage"##dialoger nomad DX stage
+ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=dlgr_nginx_dx_stage"##dialoger doc DX stage
+ansible-playbook -i inventories/plat guest-gitlab-pipeline.yml -e "nginx_vars=dlgr_nginx_dx_stage"##dialoger pipeline DX stage
+
+ansible-playbook -i inventories/plat guest-cloudflare.yml -e "nginx_vars=dlgr_nginx_ss_stage"##dialoger cloudflare SS stage
+ansible-playbook -i inventories/plat guest-certbot-nginx-inventory.yml -e "nginx_vars=dlgr_nginx_ss_stage"##dialoger certbot SS stage
+ansible-playbook -i inventories/plat guest-nginx-service.yml -e "nginx_vars=dlgr_nginx_ss_stage"##dialoger nginx SS stage
+ansible-playbook -i inventories/plat guest-nomad-job.yml -e "nginx_vars=dlgr_nginx_ss_stage"##dialoger nomad SS stage
+ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=dlgr_nginx_ss_stage"##dialoger doc SS stage
+ansible-playbook -i inventories/plat guest-gitlab-pipeline.yml -e "nginx_vars=dlgr_nginx_ss_stage"##dialoger pipeline SS stage
+
+ansible-playbook -i inventories/plat guest-cloudflare.yml -e "nginx_vars=dlgr_nginx_px_stage"##dialoger cloudflare PX stage
+ansible-playbook -i inventories/plat guest-certbot-nginx-inventory.yml -e "nginx_vars=dlgr_nginx_px_stage"##dialoger certbot PX stage
+ansible-playbook -i inventories/plat guest-nginx-service.yml -e "nginx_vars=dlgr_nginx_px_stage"##dialoger nginx PX stage
+ansible-playbook -i inventories/plat guest-nomad-job.yml -e "nginx_vars=dlgr_nginx_px_stage"##dialoger nomad PX stage
+ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=dlgr_nginx_px_stage"##dialoger doc PX stage
+ansible-playbook -i inventories/plat guest-gitlab-pipeline.yml -e "nginx_vars=dlgr_nginx_px_stage"##dialoger pipeline PX stage
+
+##===========+plat+==============
+ansible-playbook -i inventories/plat guest-nginx.yml##plat nginx
+ansible-playbook -i inventories/plat guest-cloudflare.yml -e "nginx_vars=nginx_cm_stage"##plat cloudflare CM stage
+ansible-playbook -i inventories/plat guest-certbot-nginx-inventory.yml -e "nginx_vars=nginx_cm_stage"##plat certbot CM stage
+ansible-playbook -i inventories/plat guest-nginx-service.yml -e "nginx_vars=nginx_cm_stage"##plat nginx CM stage
+ansible-playbook -i inventories/plat guest-nomad-job.yml -e "nginx_vars=nginx_cm_stage"##plat nomad CM stage
+ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=nginx_cm_stage"##plat doc CM stage
+ansible-playbook -i inventories/plat guest-gitlab-pipeline.yml -e "nginx_vars=nginx_cm_stage"##plat pipeline CM stage
+
+ansible-playbook -i inventories/plat guest-cloudflare.yml -e "nginx_vars=nginx_ss_stage"##plat cloudflare SS stage
+ansible-playbook -i inventories/plat guest-certbot-nginx-inventory.yml -e "nginx_vars=nginx_ss_stage"##plat certbot SS stage
+ansible-playbook -i inventories/plat guest-nginx-service.yml -e "nginx_vars=nginx_ss_stage"##plat nginx SS stage
+ansible-playbook -i inventories/plat guest-nomad-job.yml -e "nginx_vars=nginx_ss_stage"##plat nomad SS stage
+ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=nginx_ss_stage"##plat doc SS stage
+ansible-playbook -i inventories/plat guest-gitlab-pipeline.yml -e "nginx_vars=nginx_ss_stage"##plat pipeline SS stage
+
+ansible-playbook -i inventories/plat guest-cloudflare.yml -e "nginx_vars=nginx_px_stage"##plat cloudflare PX stage
+ansible-playbook -i inventories/plat guest-certbot-nginx-inventory.yml -e "nginx_vars=nginx_px_stage"##plat certbot PX stage
+ansible-playbook -i inventories/plat guest-nginx-service.yml -e "nginx_vars=nginx_px_stage"##plat nginx PX stage
+ansible-playbook -i inventories/plat guest-nomad-job.yml -e "nginx_vars=nginx_px_stage"##plat nomad PX stage
+ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=nginx_px_stage"##plat doc PX stage
+ansible-playbook -i inventories/plat guest-gitlab-pipeline.yml -e "nginx_vars=nginx_px_stage"##plat pipeline PX stage
+
+ansible-playbook -i inventories/plat guest-cloudflare.yml -e "nginx_vars=nginx_dx_stage"##plat cloudflare DX stage
+ansible-playbook -i inventories/plat guest-certbot-nginx-inventory.yml -e "nginx_vars=nginx_dx_stage"##plat certbot DX stage
+ansible-playbook -i inventories/plat guest-nginx-service.yml -e "nginx_vars=nginx_dx_stage"##plat nginx DX stage
+ansible-playbook -i inventories/plat guest-nomad-job.yml -e "nginx_vars=nginx_dx_stage"##plat nomad DX stage
+ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=nginx_dx_stage"##plat doc DX stage
+ansible-playbook -i inventories/plat guest-gitlab-pipeline.yml -e "nginx_vars=nginx_dx_stage"##plat pipeline DX stage
+
+##===========+prod+==============
+ansible-playbook -i inventories/prod guest-nginx.yml##prod nginx
+ansible-playbook -i inventories/prod guest-cloudflare.yml -e "nginx_vars=nginx_cm_dlgr_master"##prod cloudflare CM dlgr master
+ansible-playbook -i inventories/prod guest-certbot-nginx-inventory.yml -e "nginx_vars=nginx_cm_dlgr_master"##prod certbot CM dlgr master
+ansible-playbook -i inventories/prod guest-nginx-service.yml -e "nginx_vars=nginx_cm_dlgr_master"##prod nginx CM dlgr master
+ansible-playbook -i inventories/prod guest-nomad-job.yml -e "nginx_vars=nginx_cm_dlgr_master"##prod nomad CM dlgr master
+ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_cm_dlgr_master"##prod doc CM dlgr master
+ansible-playbook -i inventories/prod guest-gitlab-pipeline.yml -e "nginx_vars=nginx_cm_dlgr_master"##prod pipeline CM dlgr master
+
+ansible-playbook -i inventories/prod guest-cloudflare.yml -e "nginx_vars=nginx_cm_plat_master"##prod cloudflare CM plat master
+ansible-playbook -i inventories/prod guest-certbot-nginx-inventory.yml -e "nginx_vars=nginx_cm_plat_master"##prod certbot CM plat master
+ansible-playbook -i inventories/prod guest-nginx-service.yml -e "nginx_vars=nginx_cm_plat_master"##prod nginx CM plat master
+ansible-playbook -i inventories/prod guest-nomad-job.yml -e "nginx_vars=nginx_cm_plat_master"##prod nomad CM plat master
+ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_cm_plat_master"##prod doc CM plat master
+ansible-playbook -i inventories/prod guest-gitlab-pipeline.yml -e "nginx_vars=nginx_cm_plat_master"##prod pipeline CM plat master
+
+ansible-playbook -i inventories/prod guest-cloudflare.yml -e "nginx_vars=nginx_ss_dlgr_master"##prod cloudflare SS dlgr master
+ansible-playbook -i inventories/prod guest-certbot-nginx-inventory.yml -e "nginx_vars=nginx_ss_dlgr_master"##prod certbot SS dlgr master
+ansible-playbook -i inventories/prod guest-nginx-service.yml -e "nginx_vars=nginx_ss_dlgr_master"##prod nginx SS dlgr master
+ansible-playbook -i inventories/prod guest-nomad-job.yml -e "nginx_vars=nginx_ss_dlgr_master"##prod nomad SS dlgr master
+ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_ss_dlgr_master"##prod doc SS dlgr master
+ansible-playbook -i inventories/prod guest-gitlab-pipeline.yml -e "nginx_vars=nginx_ss_dlgr_master"##prod pipeline SS dlgr master
+
+ansible-playbook -i inventories/prod guest-cloudflare.yml -e "nginx_vars=nginx_ss_plat_master"##prod cloudflare SS plat master
+ansible-playbook -i inventories/prod guest-certbot-nginx-inventory.yml -e "nginx_vars=nginx_ss_plat_master"##prod certbot SS plat master
+ansible-playbook -i inventories/prod guest-nginx-service.yml -e "nginx_vars=nginx_ss_plat_master"##prod nginx SS plat master
+ansible-playbook -i inventories/prod guest-nomad-job.yml -e "nginx_vars=nginx_ss_plat_master"##prod nomad SS plat master
+ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_ss_plat_master"##prod doc SS plat master
+ansible-playbook -i inventories/prod guest-gitlab-pipeline.yml -e "nginx_vars=nginx_ss_plat_master"##prod pipeline SS plat master
+
+ansible-playbook -i inventories/prod guest-cloudflare.yml -e "nginx_vars=nginx_dx_dlgr_master"##prod cloudflare DX dlgr master
+ansible-playbook -i inventories/prod guest-certbot-nginx-inventory.yml -e "nginx_vars=nginx_dx_dlgr_master"##prod certbot DX dlgr master
+ansible-playbook -i inventories/prod guest-nginx-service.yml -e "nginx_vars=nginx_dx_dlgr_master"##prod nginx DX dlgr master
+ansible-playbook -i inventories/prod guest-nomad-job.yml -e "nginx_vars=nginx_dx_dlgr_master"##prod nomad DX dlgr master
+ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_dx_dlgr_master"##prod doc DX dlgr master
+ansible-playbook -i inventories/prod guest-gitlab-pipeline.yml -e "nginx_vars=nginx_dx_dlgr_master"##prod pipeline DX dlgr master
+
+ansible-playbook -i inventories/prod guest-cloudflare.yml -e "nginx_vars=nginx_dx_plat_master"##prod cloudflare DX plat master
+ansible-playbook -i inventories/prod guest-certbot-nginx-inventory.yml -e "nginx_vars=nginx_dx_plat_master"##prod certbot DX plat master
+ansible-playbook -i inventories/prod guest-nginx-service.yml -e "nginx_vars=nginx_dx_plat_master"##prod nginx DX plat master
+ansible-playbook -i inventories/prod guest-nomad-job.yml -e "nginx_vars=nginx_dx_plat_master"##prod nomad DX plat master
+ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_dx_plat_master"##prod doc DX plat master
+ansible-playbook -i inventories/prod guest-gitlab-pipeline.yml -e "nginx_vars=nginx_dx_plat_master"##prod pipeline DX plat master
+
+ansible-playbook -i inventories/prod guest-cloudflare.yml -e "nginx_vars=nginx_px_dlgr_master"##prod cloudflare PX dlgr master
+ansible-playbook -i inventories/prod guest-certbot-nginx-inventory.yml -e "nginx_vars=nginx_px_dlgr_master"##prod certbot PX dlgr master
+ansible-playbook -i inventories/prod guest-nginx-service.yml -e "nginx_vars=nginx_px_dlgr_master"##prod nginx PX dlgr master
+ansible-playbook -i inventories/prod guest-nomad-job.yml -e "nginx_vars=nginx_px_dlgr_master"##prod nomad PX dlgr master
+ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_px_dlgr_master"##prod doc PX dlgr master
+ansible-playbook -i inventories/prod guest-gitlab-pipeline.yml -e "nginx_vars=nginx_px_dlgr_master"##prod pipeline PX dlgr master
+
+ansible-playbook -i inventories/prod guest-cloudflare.yml -e "nginx_vars=nginx_px_plat_master"##prod cloudflare PX plat master
+ansible-playbook -i inventories/prod guest-certbot-nginx-inventory.yml -e "nginx_vars=nginx_px_plat_master"##prod certbot PX plat master
+ansible-playbook -i inventories/prod guest-nginx-service.yml -e "nginx_vars=nginx_px_plat_master"##prod nginx PX plat master
+ansible-playbook -i inventories/prod guest-nomad-job.yml -e "nginx_vars=nginx_px_plat_master"##prod nomad PX plat master
+ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_px_plat_master"##prod doc PX plat master
+ansible-playbook -i inventories/prod guest-gitlab-pipeline.yml -e "nginx_vars=nginx_px_plat_master"##prod pipeline PX plat master
+
+ansible-playbook -i inventories/plat guest-nginx-ipallow.yml && ansible-playbook -i inventories/dialoger guest-nginx-ipallow.yml && ansible-playbook -i inventories/prod guest-nginx-ipallow.yml##ipallow
+
+ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=dlgr_nginx_dx_develop" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=dlgr_nginx_px_develop" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=dlgr_nginx_pw_develop" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=dlgr_nginx_ss_develop" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=nginx_dx_develop" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=nginx_px_develop" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=nginx_ss_develop" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=dlgr_nginx_cm_stage" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=dlgr_nginx_dx_stage" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=dlgr_nginx_px_stage" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=dlgr_nginx_pw_stage" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=dlgr_nginx_ss_stage" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=nginx_cm_stage" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=nginx_dx_stage" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=nginx_px_stage" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=nginx_ss_stage" && ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_cm_dlgr_master" && ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_dx_dlgr_master" && ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_px_dlgr_master" && ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_pw_dlgr_master" && ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_ss_dlgr_master" && ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_cm_plat_master" && ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_dx_plat_master" && ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_px_plat_master" && ansible-playbook -i inventories/prod guest-nomad-doc.yml -e "nginx_vars=nginx_ss_plat_master" && ansible-playbook -i inventories/plat guest-nomad-doc.yml -e "nginx_vars=dlgr_nginx_tg_testing"##all docs
+##
+##OCOCOCOB
+##OCOCOCOB

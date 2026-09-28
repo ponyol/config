@@ -1,0 +1,6 @@
+servers:
+    - url: https://aproxy.staging.wldev.app
+      name: ""
+    - url: https://aproxy.wldev.app
+      name: ""
+default_port: "22"

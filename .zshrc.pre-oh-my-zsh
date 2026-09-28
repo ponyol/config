@@ -1,0 +1,4 @@
+export GOPATH="$HOME/go"
+export PATH="/usr/local/opt/ncurses/bin:/Users/ponyol/Library/Python/3.7/bin:$PATH:$GOPATH/bin:/usr/local/opt/python/bin"
+export HARBOR_USER="devops"
+export HARBOR_PASS="Xz3ND98mLdk5"
